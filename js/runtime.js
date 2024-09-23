@@ -34,3 +34,11 @@ function createtime() {
 setInterval((() => {
     createtime()
 }), 1e3);
+
+document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+      document.title = '出去摸会🐟...';
+    } else {
+      document.title = '欢迎回来🤡！！！';
+    }
+  });
